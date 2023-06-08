@@ -1,0 +1,79 @@
+@font-face {
+	font-family: "Millimetre";
+	src: url("Millimetre-Regular_web.woff2") format("woff2");
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100vh;
+	background: white;
+	overflow: hidden;
+}
+
+.header {
+	position: fixed;
+	top: 30%;
+	left: 40%;
+	transform: translate(-50%, -50%);
+	font-family: 'Millimetre';
+	font-size: 80px;
+	color: black;
+	z-index: 2;
+}
+
+.container {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+}
+
+.row {
+	display: flex;
+	justify-content: space-around;
+	margin: 1em 0;
+}
+
+.block {
+	width: 400px;
+	height: 400px;
+	background-size: cover;
+	background: transparent;
+	margin: 0;
+	border-style: solid;
+	border-width: 3px;
+	border-color: black;
+}
+
+img {
+	opacity: 0.1;
+	width: 400px;
+	height: 400px;
+}
+
+img:hover {
+	opacity: 1;
+	transition: 0.7s ease;
+}
+
+/* the background colors for blocks */
+
+.black-1 {
+	background: #241F13;
+}
+.purple-2 {
+	background: #AC04CF;
+}
+.blue-1 {
+	background: #116BA9;
+}
+.brown-1 {
+	background: #826A64;
+}
+.white-4 {
+	background: #F2FEFF;
+}
+.yellow-1 {
+	background: #E3C787;
+}

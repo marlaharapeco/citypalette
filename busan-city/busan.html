@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <title>Busan</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="assets/style-busan.css">
+    <script src="https://unpkg.com/panzoom@8.7.3/dist/panzoom.min.js"></script>
+
+  </head>
+
+  <body>
+    <div class="header">
+      See the colors of Busan by dragging
+    </div>
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="block black-2">
+          <img src="assets/black-2.jpg">
+        </div>
+        <div class="block blue-3">
+          <img src="assets/blue-3.jpg">
+        </div>
+        <div class="block brown-2">
+          <img src="assets/brown-2.jpg">
+        </div>
+        <div class="block green-2">
+          <img src="assets/green-2.jpg">
+        </div> 
+      </div>
+      <div class="row">
+        <div class="block orange-3">
+          <img src="assets/orange-3.jpg">
+        </div>
+        <div class="block orange-4">
+          <img src="assets/orange-4.jpg">
+        </div>
+        <div class="block red-7">
+          <img src="assets/red-7.jpg">
+        </div>
+        <div class="block yellow-6">
+          <img src="assets/yellow-6.jpg">
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var element = document.querySelector(".container");
+      panzoom(element, {
+      minZoom: 1,
+      maxZoom: 1
+      });
+    </script>
+</html>

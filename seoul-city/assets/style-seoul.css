@@ -1,0 +1,151 @@
+@font-face {
+	font-family: "Millimetre";
+	src: url("Millimetre-Regular_web.woff2") format("woff2");
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100vh;
+	background: white;
+	overflow: hidden;
+}
+
+.header {
+	position: fixed;
+	top: 30%;
+	left: 40%;
+	transform: translate(-50%, -50%);
+	font-family: 'Millimetre';
+	font-size: 80px;
+	color: black;
+	z-index: 2;
+}
+
+.container {
+	position: absolute;
+	width: 200%;
+	height: 200vh;
+}
+
+.row {
+	display: flex;
+	justify-content: space-around;
+	margin: 1em 0;
+}
+
+.block {
+	width: 400px;
+	height: 400px;
+	background-size: cover;
+	background: transparent;
+	margin: 0;
+	border-style: solid;
+	border-width: 3px;
+	border-color: black;
+}
+
+img {
+	opacity: 0.1;
+	width: 400px;
+	height: 400px;
+}
+
+img:hover {
+	opacity: 1;
+	transition: 0.7s ease;
+}
+
+/* the background colors for blocks */
+
+.beige-1 {
+	background: #C1AC95;
+}
+.beige-2 {
+	background: #D2C1A5;
+}
+.beige-3 {
+	background: #F8F9B9;
+}
+.beige-4 {
+	background: #F8E09D;
+}
+.blue-2 {
+	background: #0F2924;
+}
+.blue-4 {
+	background: #009FE0;
+}
+.green-1 {
+	background: #00ff00;
+}
+.green-3 {
+	background: #00CA60;
+}
+.green-4 {
+	background: #B5F6C1;
+}
+.orange-2 {
+	background: #FF6D00;
+}
+.orange-5 {
+	background: #DE8557;
+}
+.orange-6 {
+	background: #FFA727;
+}
+.pink-1 {
+	background: #EAA8AC;
+}
+.pink-2 {
+	background: #FF0062;
+}
+.pink-3 {
+	background: #E00352;
+}
+.red-1 {
+	background: #CC0704;
+}
+.red-2 {
+	background: #BD0B1F;
+}
+.red-3 {
+	background: #E0230B;
+}
+.red-4 {
+	background: #FF0000;
+}
+.red-6 {
+	background: #FF001C;
+}
+.red-8 {
+	background: #AA5549;
+}
+.white-1 {
+	background: #CEC1B5;
+}
+.white-2 {
+	background: #D5DFD3;
+}
+.white-3 {
+	background: #F1F4F3;
+}
+.white-5 {
+	background: #E3EDD7;
+}
+.white-7 {
+	background: #546E87;
+}
+.yellow-2 {
+	background: #FCF65E;
+}
+.yellow-3 {
+	background: #F6C084;
+}
+.yellow-4 {
+	background: #E1BF00;
+}
+.yellow-5 {
+	background: #E9D600;
+}
