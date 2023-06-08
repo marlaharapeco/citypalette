@@ -1,115 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 	<head>
 		<meta charset="UTF-8" />
 		<title>City Palette</title>
 		<link rel="stylesheet" type="text/css" href="assets/style.css" />
 	</head>
 	<body>
+		
+
 		<div class="container">
 			<div class="col">
 				<p class="title"><u>City Palette</u></p>
-				<p>❒click and drag for color surprise</p>
-				<!--<p>by Maralmaa Khudree</p>-->
+				<div class="cities">
+					<p class="title"><u>Cities</u></p>
+					<p><a href="seoul-city/seoul.html">➭SOUTHKOREA_SEOUL</a></p>
+					<p><a href="ub-city/ub.html">➭MONGOLIA_ULAANBAATAR</a></p>
+					<p><a href="busan-city/busan.html">➭SOUTHKOREA_BUSAN</a></p>
+					<p><a href="singapore-city/singapore.html">➭SINGAPORE_SINGAPORE</a></p>
+				</div>
+				<p>❒by Maralmaa Khudree</p>
 			</div>
 			<div class="col">
 				<p>
-					Do we pay as much attention to our surroundings 
-					as we want in our daily lives? 
-					There are so many hidden colors which we 
-					pass by without appreciating everyday in our cities.
-					Let's take a small break from our stressed lives
-					and start 'color-hunting'.
-					Can you become the Master Observer of your city?
+					Do we pay as much attention to our surroundings<br /> 
+					as we want in our daily lives?<br /> 
+					There are so many hidden colors which we<br /> 
+					pass by without appreciating everyday in our cities.<br />
+					Let's take a small break from our stressed lives<br />
+					and start 'color-hunting'.<br />
+					<u>Can you become the Master Observer of your city?</u>
 				</p>
 				<br />
 				<br />
 				<p class="title"><u>The Purpose</u></p>
 				<p>
-					Through this website project, I wish to make an archive 
+					Through this website project, I wish to make an archive<br /> 
 					of 'palettes' of colors from all around the world.
 				</p>
 				<br />
 				<br />
 				<p class="title"><u>Care to Contribute?</u></p>
 				<p>
-					If you wish to share the colors of YOUR city, send a photo 
-					from your color-hunt library to the below email address. 
+					If you wish to share the colors of <u>YOUR</u> city, send a photo<br /> 
+					from your color-hunt library to the below email address.<br /> 
 					You can leave your trace anonymously on this website :)))
 				</p>
-				<p>citypalette237@gmail.com</p>
+				<br />
+				<p><a href="mailto: citypalette237@gmail.com">send photos to citypalette237@gmail.com</a></p>
 
-				<div class="cities">
-					<p class="title"><u>Cities</u></p>
-					<p><a class="link" href="seoul-city/seoul.html">SOUTHKOREA_SEOUL</a></p>
-					<p><a class="link" href="ub-city/ub.html">MONGOLIA_ULAANBAATAR</a></p>
-					<p><a class="link" href="busan-city/busan.html">SOUTHKOREA_BUSAN</a></p>
-					<p><a class="link" href="singapore-city/singapore.html">SINGAPORE_SINGAPORE</a></p>
-				</div>
-
-				<!--<div class="cities">
-                	<p class="title"><u>Cities</u></p>
-                	<p id="seoul" class="link">SOUTHKOREA_SEOUL</p>
-                	<p id="ub" class="link">MONGOLIA_ULAANBAATAR</p>
-                	<p id="busan" class="link">SOUTHKOREA_BUSAN</p>
-                	<p id="singapore" class="link">SINGAPORE_SINGAPORE</p>
-            	</div>-->
 				
-
 			</div>
 		</div>
-
-		<canvas id="draw"></canvas>
-
-		<!--learn the details of the script code later-->
-
+		
 		<script>
-			const canvas = document.querySelector("canvas");
-			const ctx = canvas.getContext("2d");
+			var body=document.body;
 
-			canvas.width = window.innerWidth;
-			canvas.height = window.innerHeight;
+			document.addEventListener('mousemove', (e)=> {
+				var elem=document.createElement('div');
+				elem.setAttribute('class','trail')
+				elem.setAttribute('style',`left: ${e.clientX - 10}px; top: ${e.clientY -10}px;`);
 
-			ctx.strokeStyle = "#BADA55";
-			ctx.lineJoin = "round";
-			ctx.lineCap = "round";
-			ctx.lineWidth = 100;
-
-			let isDrawing = false;
-			let lastX = 0;
-			let lastY = 0;
-			let hue = 0;
-			let direction = true;
-
-			function draw(e) {
-				if(!isDrawing) return;
-				ctx.strokeStyle = `hsl(${hue}, 100%, 50%`;
-				ctx.beginPath();
-				ctx.moveTo(lastX, lastY);
-				ctx.lineTo(e.offsetX, e.offsetY);
-				ctx.stroke();
-				[lastX, lastY] = [e.offsetX, e.offsetY];
-
-				hue++;
-				if (hue >= 360) {
-					hue = 0;
+				elem.onanimationend=()=>{
+					elem.remove();
 				}
-			}
 
-			function clearCanvas() {
-				ctx.clearRect(0, 0, canvas.width, canvas.height);
-			}
-
-			canvas.addEventListener("mousedown", (e) => {
-				isDrawing = true;
-				[lastX, lastY] = [e.offsetX, e.offsetY];
-			});
-
-			canvas.addEventListener("mousemove", draw);
-			canvas.addEventListener("mouseup", () => {
-				isDrawing = false;
-				clearCanvas();
-			});
+				body.insertAdjacentElement('beforeend', elem);
+			})
 		</script>
+
 	</body>
 </html>
